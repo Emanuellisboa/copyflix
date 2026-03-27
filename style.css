@@ -105,13 +105,18 @@ figure {
     margin: 0; /* Remove margem */
     overflow: hidden; /* Corta conteúdo que sai da borda */
     border-radius: 8px; /* Deixa as pontas redondas */
-    aspect-ratio: 1; /* Mantém proporção 1:1 (quadrado) */
+    width: 100%; /* Largura total */
+    padding-bottom: 100%; /* Altura igual à largura (quadrado) */
+    position: relative; /* Para posicionar a imagem */
     background-color: var(--secondary-bg); /* Fundo cinza escuro */
     transition: all 0.3s ease; /* Animação suave */
 }
 
 /* Imagem do perfil */
 img {
+    position: absolute; /* Posicionamento absoluto */
+    top: 0; /* No topo */
+    left: 0; /* Na esquerda */
     width: 100%; /* Usa toda a largura */
     height: 100%; /* Usa toda a altura */
     object-fit: cover; /* Preenchie sem distorcer */
@@ -129,7 +134,7 @@ figcaption {
 }
 
 /* Responsivo para tablets */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     h1 {
         font-size: 2rem; /* Título menor */
         margin-bottom: 2rem; /* Menos espaço embaixo */
@@ -152,7 +157,7 @@ figcaption {
 }
 
 /* Responsivo para celulares */
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
     h1 {
         font-size: 1.5rem; /* Título ainda menor */
         margin-bottom: 1.5rem; /* Menos espaço embaixo */
