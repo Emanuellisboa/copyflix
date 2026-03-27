@@ -53,6 +53,29 @@ Cada perfil redireciona para o catálogo com um parâmetro específico:
 
 O perfil selecionado é salvo no `localStorage` para personalização.
 
+## 🖼️ Imagens dos Perfis
+
+As imagens são carregadas usando caminhos absolutos baseados na origem do site:
+- Funciona tanto localmente quanto no GitHub Pages
+- As imagens ficam na pasta `assets/` na raiz do projeto
+- O catálogo acessa as imagens usando `window.location.origin + '/assets/nome-imagem.ext'`
+
+### 📤 Fazendo Upload no GitHub
+
+Para que as imagens apareçam no GitHub Pages:
+
+1. **Certifique-se** de que as imagens estão na pasta `assets/`
+2. **Faça commit** e **push** das imagens junto com os outros arquivos
+3. **Aguarde** alguns minutos para o GitHub Pages atualizar
+4. **Verifique** se as imagens estão acessíveis em: `https://seu-usuario.github.io/seu-repo/assets/`
+
+### 🔧 Solução de Problemas
+
+Se as imagens não carregarem:
+- Verifique se os arquivos estão na pasta `assets/`
+- Certifique-se de que foram feitos commit e push
+- Use a URL completa do GitHub Pages para testar
+
 ## 🔧 Problemas comuns
 
 ### Imagens não aparecem
