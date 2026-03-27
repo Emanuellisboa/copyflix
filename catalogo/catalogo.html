@@ -1,24 +1,24 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html> <!-- declara HTML5 -->
+<html lang="pt-BR"> <!-- idioma português -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix Clone</title>
-    <link rel="stylesheet" href="catalogo.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8"> <!-- codificação UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- viewport responsivo -->
+    <title>Netflix Clone</title> <!-- título da página -->
+    <link rel="stylesheet" href="catalogo.css"> <!-- CSS local -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> <!-- ícones FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> <!-- fonte Roboto -->
 </head>
 
 <body>
     <!-- Navbar -->
-    <header class="navbar" id="navbar">
-        <div class="navbar-left">
+    <header class="navbar" id="navbar"> <!-- cabeçalho fixo -->
+        <div class="navbar-left"> <!-- lado esquerdo da navbar -->
             <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
-                alt="Netflix">
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#main-content" class="active">Início</a></li>
+                alt="Netflix"> <!-- logo da Netflix -->
+            <nav> <!-- navegação -->
+                <ul class="nav-links"> <!-- lista de links -->
+                    <li><a href="#main-content" class="active">Início</a></li> <!-- link ativo -->
                     <li><a href="#main-content">Séries</a></li>
                     <li><a href="#main-content">Filmes</a></li>
                     <li><a href="#main-content">Jogos</a></li>
@@ -28,33 +28,33 @@
                 </ul>
             </nav>
         </div>
-        <div class="navbar-right">
-            <i class="fas fa-search icon"></i>
-            <a href="../index.html" class="kids-link">Seu nome</a>
-            <div class="nav-notification">
-                <i class="fas fa-bell icon"></i>
-                <span class="notification-badge">42</span>
+        <div class="navbar-right"> <!-- lado direito da navbar -->
+            <i class="fas fa-search icon"></i> <!-- ícone de busca -->
+            <a href="../index.html" class="kids-link">Seu nome</a> <!-- link para voltar, nome do perfil -->
+            <div class="nav-notification"> <!-- notificações -->
+                <i class="fas fa-bell icon"></i> <!-- ícone de sino -->
+                <span class="notification-badge">42</span> <!-- badge de notificação -->
             </div>
-            <a href="../index.html" class="profile-menu" style="text-decoration: none; color: inherit;">
+            <a href="../index.html" class="profile-menu" style="text-decoration: none; color: inherit;"> <!-- menu de perfil -->
                 <img class="profile-icon" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
-                    alt="Profile">
-                <i class="fas fa-caret-down icon" style="font-size: 14px; margin-left: 5px;"></i>
+                    alt="Profile"> <!-- ícone do perfil -->
+                <i class="fas fa-caret-down icon" style="font-size: 14px; margin-left: 5px;"></i> <!-- seta para baixo -->
             </a>
         </div>
     </header>
 
     <!-- Sliders Container -->
-    <main class="sliders-container" id="main-content">
-        <!-- Javascript will inject the rows here -->
+    <main class="sliders-container" id="main-content"> <!-- container principal para os carrosséis -->
+        <!-- Javascript will inject the rows here --> <!-- JS injeta as linhas aqui -->
     </main>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <a href="https://www.alura.com.br/" target="_blank">
-                <p>Imersão Alura AI</p>
+    <footer> <!-- rodapé -->
+        <div class="footer-content"> <!-- conteúdo do rodapé -->
+            <a href="https://www.alura.com.br/" target="_blank"> <!-- link para Alura -->
+                <p>Projetenho emanú</p>
             </a>
-            <ul class="footer-links">
+            <ul class="footer-links"> <!-- lista de links do rodapé -->
                 <li><a href="https://www.alura.com.br/" target="_blank">Perguntas frequentes</a></li>
                 <li><a href="https://www.alura.com.br/" target="_blank">Centro de ajuda</a></li>
                 <li><a href="https://www.alura.com.br/" target="_blank">Conta</a></li>
@@ -74,7 +74,7 @@
         </div>
     </footer>
 
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script> <!-- carrega o JS modular -->
 </body>
 
 </html>

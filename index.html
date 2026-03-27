@@ -1,45 +1,45 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html> <!-- declara o tipo de documento HTML5 -->
+<html lang="pt-BR"> <!-- idioma português brasileiro -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Selecione o perfil para começar a assistir na Netflix">
-    <title>Netflix</title>
-    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8"> <!-- codificação UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- viewport responsivo -->
+    <meta name="description" content="Selecione o perfil para começar a assistir na Netflix"> <!-- descrição para SEO -->
+    <title>Netflix</title> <!-- título da página -->
+    <link rel="stylesheet" href="./style.css"> <!-- link para o CSS -->
 </head>
-<body> 
-    <main>
-        <h1>Quem está assistindo?</h1>
-        <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
-            <span class="theme-icon">🌙</span>
+<body>
+    <main> <!-- conteúdo principal -->
+        <h1>Quem está assistindo?</h1> <!-- título principal -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema"> <!-- botão para alternar tema -->
+            <span class="theme-icon">🌙</span> <!-- ícone do tema -->
         </button>
-        <section class="profiles"> 
-            <a href="catalogo/catalogo.html?profile=jennifer" class="profile-link">
+        <section class="profiles"> <!-- seção dos perfis -->
+            <a href="catalogo/catalogo.html?profile=jennifer" class="profile-link"> <!-- link para perfil Jennifer -->
+                <article class="profile"> <!-- artigo do perfil -->
+                    <figure> <!-- figura com imagem -->
+                        <img src="./assets/perfil-jennifer.png" alt="Perfil de Jennifer com tema Lisa Simpson"> <!-- imagem do perfil -->
+                    </figure>
+                    <figcaption>Jennifer</figcaption> <!-- legenda do perfil -->
+                </article>
+            </a>
+            <a href="catalogo/catalogo.html?profile=gurgel" class="profile-link"> <!-- link para perfil Gurgel -->
                 <article class="profile">
                     <figure>
-                        <img src="./assets/perfil-jennifer.png" alt="Perfil de Jennifer com tema Lisa Simpson">
+                        <img src="./assets/batman-gurgel.jpg" alt="Perfil de Gurgel com tema Batman"> <!-- imagem do perfil -->
                     </figure>
-                    <figcaption>Jennifer</figcaption>
+                    <figcaption>Gurgel</figcaption> <!-- legenda do perfil -->
                 </article>
             </a>
-            <a href="catalogo/catalogo.html?profile=gurgel" class="profile-link">
-                <article class="profile">        
+            <a href="catalogo/catalogo.html?profile=mota" class="profile-link"> <!-- link para perfil Mota -->
+                <article class="profile">
                     <figure>
-                        <img src="./assets/batman-gurgel.jpg" alt="Perfil de Gurgel com tema Batman">
+                        <img src="./assets/emanuel-luffy.jpg" alt="Perfil de Mota com tema Luffy"> <!-- imagem do perfil -->
                     </figure>
-                    <figcaption>Gurgel</figcaption>
-                </article>
-            </a>     
-            <a href="catalogo/catalogo.html?profile=mota" class="profile-link">
-                <article class="profile">        
-                    <figure>
-                        <img src="./assets/emanuel-luffy.jpg" alt="Perfil de Mota com tema Luffy">
-                    </figure>
-                    <figcaption>Mota</figcaption>
+                    <figcaption>Mota</figcaption> <!-- legenda do perfil -->
                 </article>
             </a>
-        </section>    
+        </section>
     </main>
-    <script src="./script.js"></script>
+    <script src="./script.js"></script> <!-- script JavaScript -->
 </body>
 </html>

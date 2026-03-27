@@ -1,6 +1,8 @@
+// importa dados das categorias e função para criar carrosséis
 import { categories } from './data.js';
 import { createCarousel } from './components/Carousel.js';
 
+// executa quando o DOM estiver carregado
 document.addEventListener('DOMContentLoaded', () => {
     // Dados dos perfis - caminhos absolutos para funcionar do catálogo
     const baseUrl = window.location.origin;

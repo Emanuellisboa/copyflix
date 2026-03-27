@@ -1,9 +1,17 @@
+<!-- Este é o README do projeto Netflix Profile Selector -->
+<!-- Descreve funcionalidades, estrutura e como usar -->
+
 # Netflix Profile Selector
+
+<!-- Título principal do projeto -->
 
 Uma página de seleção de perfis inspirada na Netflix com dark/light mode.
 
+<!-- Descrição breve -->
+
 ## 🚀 Funcionalidades
 
+<!-- Lista de funcionalidades implementadas -->
 - ✅ Seleção de perfis com hover effects
 - ✅ Dark/Light mode toggle
 - ✅ Design responsivo (desktop, tablet, mobile)
@@ -13,12 +21,14 @@ Uma página de seleção de perfis inspirada na Netflix com dark/light mode.
 
 ## 📱 Responsividade
 
+<!-- Detalhes sobre responsividade -->
 - **Desktop**: Perfis em grid responsivo (até 3 colunas)
 - **Tablet**: Sempre 2 colunas
 - **Mobile**: Sempre 2 colunas
 
 ## 🛠️ Tecnologias
 
+<!-- Tecnologias usadas -->
 - HTML5 semântico
 - CSS3 com variáveis CSS
 - JavaScript vanilla
@@ -26,6 +36,7 @@ Uma página de seleção de perfis inspirada na Netflix com dark/light mode.
 
 ## 📂 Estrutura do Projeto
 
+<!-- Estrutura de pastas -->
 ```
 netflix/
 ├── index.html
@@ -39,6 +50,7 @@ netflix/
 
 ## 🚀 Como usar
 
+<!-- Instruções de uso -->
 1. Clone o repositório
 2. Abra o `index.html` no navegador
 3. Clique no emoji 🌙/☀️ para alternar entre dark/light mode
@@ -46,6 +58,7 @@ netflix/
 
 ## 🔗 Links dos Perfis
 
+<!-- Explicação dos links -->
 Cada perfil redireciona para o catálogo com um parâmetro específico:
 - **Jennifer**: `catalogo/catalogo.html?profile=jennifer`
 - **Gurgel**: `catalogo/catalogo.html?profile=gurgel`
@@ -55,6 +68,7 @@ O perfil selecionado é salvo no `localStorage` para personalização.
 
 ## 🖼️ Imagens dos Perfis
 
+<!-- Detalhes sobre imagens -->
 As imagens são carregadas usando caminhos absolutos baseados na origem do site:
 - Funciona tanto localmente quanto no GitHub Pages
 - As imagens ficam na pasta `assets/` na raiz do projeto
@@ -62,6 +76,7 @@ As imagens são carregadas usando caminhos absolutos baseados na origem do site:
 
 ### 📤 Fazendo Upload no GitHub
 
+<!-- Instruções para GitHub -->
 Para que as imagens apareçam no GitHub Pages:
 
 1. **Certifique-se** de que as imagens estão na pasta `assets/`
@@ -71,6 +86,7 @@ Para que as imagens apareçam no GitHub Pages:
 
 ### 🔧 Solução de Problemas
 
+<!-- Troubleshooting -->
 Se as imagens não carregarem:
 - Verifique se os arquivos estão na pasta `assets/`
 - Certifique-se de que foram feitos commit e push
@@ -78,6 +94,7 @@ Se as imagens não carregarem:
 
 ## 🔧 Problemas comuns
 
+<!-- Problemas comuns -->
 ### Imagens não aparecem
 - Verifique se a pasta `assets/` existe
 - Certifique-se de que os caminhos estão corretos: `./assets/nome-imagem.ext`
@@ -93,6 +110,7 @@ Se as imagens não carregarem:
 
 ## 📝 Notas
 
+<!-- Notas finais -->
 - O projeto usa `localStorage` para salvar a preferência de tema
 - As imagens são placeholders - substitua pelas suas próprias
 - Compatível com navegadores modernos

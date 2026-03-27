@@ -1,35 +1,39 @@
+/* Variáveis CSS para cores */
 :root {
-    --netflix-red: #E50914;
-    --dark-bg: #141414;
-    --text-color: #ffffff;
+    --netflix-red: #E50914; /* vermelho da Netflix */
+    --dark-bg: #141414; /* fundo escuro */
+    --text-color: #ffffff; /* texto branco */
 }
 
+/* Reset padrão */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos do body */
 body {
-    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: var(--dark-bg);
-    color: var(--text-color);
-    overflow-x: hidden;
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* fonte */
+    background-color: var(--dark-bg); /* fundo escuro */
+    color: var(--text-color); /* texto branco */
+    overflow-x: hidden; /* sem scroll horizontal */
 }
 
+/* Links */
 a {
-    text-decoration: none;
-    color: #e5e5e5;
-    transition: color 0.3s;
+    text-decoration: none; /* sem sublinhado */
+    color: #e5e5e5; /* cor cinza clara */
+    transition: color 0.3s; /* transição suave */
 }
 
 a:hover {
-    color: #b3b3b3;
+    color: #b3b3b3; /* cor mais clara no hover */
 }
 
 /* Navbar */
 .navbar {
-    position: fixed;
+    position: fixed; /* fixo no topo */
     top: 0;
     width: 100%;
     display: flex;
@@ -111,8 +115,7 @@ a:hover {
 /* Sliders */
 .sliders-container {
     padding: 0 4%;
-    padding-top: 100px;
-    /* Space for navbar */
+    padding-top: 100px; /* espaço para navbar */
     position: relative;
     z-index: 3;
     padding-bottom: 100px;
@@ -154,17 +157,14 @@ a:hover {
 
 .movie-row {
     display: flex;
-    gap: 8px;
-    /* Small gap between movie cards */
-    overflow-x: visible;
-    /* Let the expanded cards paint outside this box vertically */
-    padding: 10px 4% 50px 4%;
-    /* Added bottom padding to hold the expanding modal */
-    margin: 0 -4%;
-    /* Pull edges back out so we don't double up padding from container */
+    gap: 8px; /* pequeno gap entre cards */
+    overflow-x: visible; /* deixa cards expandidos pintarem fora */
+    padding: 10px 4% 50px 4%; /* padding para modal */
+    margin: 0 -4%; /* compensa padding do container */
     scroll-behavior: smooth;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch; /* scroll suave em mobile */
 }
 
 .movie-row::-webkit-scrollbar {
@@ -181,11 +181,10 @@ a:hover {
     transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s, border-radius 0.3s 0s, z-index 0s 0.3s, box-shadow 0.3s 0s;
     position: relative;
     z-index: 1;
-    transform-origin: center center;
-    /* Default origin */
+    transform-origin: center center; /* origem padrão */
 }
 
-/* Modifiers applied by JavaScript to prevent edge clipping */
+/* Modificadores aplicados por JS para evitar corte nas bordas */
 .movie-card.origin-left {
     transform-origin: left center;
 }
@@ -195,8 +194,7 @@ a:hover {
 }
 
 .movie-card:hover {
-    transform: scale(1.6) translateY(-5%);
-    /* Reduced vertical translation since container has more padding */
+    transform: scale(1.6) translateY(-5%); /* escala e move para cima */
     z-index: 99;
     border-radius: 6px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
@@ -243,7 +241,7 @@ a:hover {
     opacity: 0;
 }
 
-/* Card Details Modal */
+/* Modal de detalhes do card */
 .card-details {
     position: absolute;
     top: 100%;
@@ -427,7 +425,7 @@ a:hover {
     color: black;
 }
 
-/* Progress bar */
+/* Barra de progresso */
 .progress-bar-container {
     position: absolute;
     bottom: 0;
@@ -446,7 +444,7 @@ a:hover {
     border-bottom-left-radius: 4px;
 }
 
-/* Mobile adjustments */
+/* Ajustes para mobile */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -461,6 +459,77 @@ a:hover {
     .slider-title {
         font-size: 4vw;
         line-height: 4.5vw;
+    }
+
+    /* Desabilitar hover em mobile/tablet */
+    .movie-card:hover {
+        transform: none; /* sem scale */
+        z-index: 1; /* z-index normal */
+        border-radius: 4px; /* borda normal */
+        box-shadow: none; /* sem sombra */
+    }
+
+    .movie-card:hover .card-details {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Ajustes para celulares pequenos */
+@media (max-width: 480px) {
+    .navbar {
+        height: 50px; /* navbar menor */
+        padding: 0 2%; /* padding menor */
+    }
+
+    .logo {
+        width: 70px; /* logo menor */
+    }
+
+    .movie-row {
+        gap: 6px; /* gap médio */
+        padding: 10px 2% 50px 2%; /* padding ajustado */
+        margin: 0 -2%; /* ajustar margem */
+    }
+
+    .movie-card {
+        min-width: 160px; /* cards maiores novamente */
+        width: 160px;
+        height: 90px;
+    }
+
+    .slider-title {
+        font-size: 4.5vw; /* título ajustado */
+        line-height: 5vw;
+    }
+
+    .sliders-container {
+        padding: 0 2%; /* padding lateral */
+        padding-top: 60px; /* espaço para navbar */
+        padding-bottom: 50px; /* espaço embaixo */
+    }
+
+    .card-details {
+        padding: 15px 12px; /* padding médio no modal */
+        font-size: 11px; /* fonte média */
+    }
+
+    .btn-icon {
+        width: 28px; /* botões médios */
+        height: 28px;
+        font-size: 13px;
+    }
+
+    .details-info {
+        font-size: 10px; /* info média */
+    }
+
+    .details-tags {
+        font-size: 10px; /* tags médias */
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(1, 1fr); /* uma coluna no footer */
     }
 }
 
