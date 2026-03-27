@@ -79,25 +79,25 @@ h1 {
     width: 100%; /* Usa toda a largura disponível */
 }
 
-/* Card de cada perfil */
-.profile {
-    cursor: pointer; /* Cursor muda para "clicável" */
-    transition: all 0.3s ease; /* Animação suave (0.3 segundos) */
-    text-align: center; /* Centraliza o conteúdo */
+/* Links dos perfis */
+.profile-link {
+    text-decoration: none; /* Remove sublinhado */
+    color: inherit; /* Herda cor do texto */
+    display: block; /* Ocupa todo o espaço */
+    transition: all 0.3s ease; /* Animação suave */
 }
 
-/* Efeito ao passar o mouse */
-.profile:hover {
-    transform: scale(1.05); /* Aumenta 5% de tamanho */
+.profile-link:hover {
+    transform: scale(1.05); /* Mesmo efeito do perfil */
 }
 
-.profile:hover figure {
-    filter: brightness(1.2); /* Aumenta o brilho em 20% */
+.profile-link:hover figure {
+    filter: brightness(1.2); /* Mesmo brilho */
 }
 
-.profile:hover figcaption {
-    color: var(--netflix-red); /* Muda cor para vermelho Netflix */
-    font-size: 1.1rem; /* Aumenta tamanho da fonte */
+.profile-link:hover figcaption {
+    color: var(--netflix-red); /* Mesmo efeito vermelho */
+    font-size: 1.1rem; /* Mesmo aumento de fonte */
 }
 
 /* Container da imagem */

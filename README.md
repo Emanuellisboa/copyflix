@@ -9,6 +9,7 @@ Uma página de seleção de perfis inspirada na Netflix com dark/light mode.
 - ✅ Design responsivo (desktop, tablet, mobile)
 - ✅ Animações suaves
 - ✅ Acessibilidade com ARIA labels
+- ✅ Links para catálogo personalizado por perfil
 
 ## 📱 Responsividade
 
@@ -41,6 +42,16 @@ netflix/
 1. Clone o repositório
 2. Abra o `index.html` no navegador
 3. Clique no emoji 🌙/☀️ para alternar entre dark/light mode
+4. Clique em qualquer perfil para acessar o catálogo personalizado
+
+## 🔗 Links dos Perfis
+
+Cada perfil redireciona para o catálogo com um parâmetro específico:
+- **Jennifer**: `catalogo/catalogo.html?profile=jennifer`
+- **Gurgel**: `catalogo/catalogo.html?profile=gurgel`
+- **Mota**: `catalogo/catalogo.html?profile=mota`
+
+O perfil selecionado é salvo no `localStorage` para personalização.
 
 ## 🔧 Problemas comuns
 

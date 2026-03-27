@@ -29,5 +29,11 @@ function updateThemeIcon(theme) {
     themeIcon.textContent = theme === 'light-mode' ? '☀️' : '🌙';
 }
 
+// Função para salvar perfil selecionado
+function selectProfile(profileName) {
+    localStorage.setItem('selectedProfile', profileName);
+    // O redirecionamento é feito pelo link HTML
+}
+
 // Event listener para o botão
 themeToggle.addEventListener('click', toggleTheme);
