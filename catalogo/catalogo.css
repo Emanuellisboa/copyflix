@@ -335,9 +335,44 @@ a:hover {
     font-family: Arial, sans-serif;
 }
 
+.age-badge.green-accent {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+.age-badge.blue-accent {
+    background-color: #2196f3;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+.age-badge.yellow-accent {
+    background-color: #fbc02d;
+    border: none;
+    color: #1f1f1f;
+    font-weight: bold;
+}
+
+.age-badge.orange-accent {
+    background-color: #ff9800;
+    border: none;
+    color: #1f1f1f;
+    font-weight: bold;
+}
+
 .age-badge.red-accent {
     background-color: #d32f2f;
     border: none;
+    font-weight: bold;
+}
+
+.age-badge.black-accent {
+    background-color: #212121;
+    border: none;
+    color: white;
     font-weight: bold;
 }
 

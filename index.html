@@ -14,7 +14,7 @@
             <span class="theme-icon">🌙</span> <!-- ícone do tema -->
         </button>
         <section class="profiles"> <!-- seção dos perfis -->
-            <a href="catalogo/catalogo.html?profile=jennifer" class="profile-link"> <!-- link para perfil Jennifer -->
+            <a href="intro.html?profile=jennifer" class="profile-link" onclick="selectProfile('jennifer')"> <!-- link para perfil Jennifer -->
                 <article class="profile"> <!-- artigo do perfil -->
                     <figure> <!-- figura com imagem -->
                         <img src="./assets/perfil-jennifer.png" alt="Perfil de Jennifer com tema Lisa Simpson"> <!-- imagem do perfil -->
@@ -22,7 +22,7 @@
                     <figcaption>Jennifer</figcaption> <!-- legenda do perfil -->
                 </article>
             </a>
-            <a href="catalogo/catalogo.html?profile=gurgel" class="profile-link"> <!-- link para perfil Gurgel -->
+            <a href="intro.html?profile=gurgel" class="profile-link" onclick="selectProfile('gurgel')"> <!-- link para perfil Gurgel -->
                 <article class="profile">
                     <figure>
                         <img src="./assets/batman-gurgel.jpg" alt="Perfil de Gurgel com tema Batman"> <!-- imagem do perfil -->
@@ -30,7 +30,7 @@
                     <figcaption>Gurgel</figcaption> <!-- legenda do perfil -->
                 </article>
             </a>
-            <a href="catalogo/catalogo.html?profile=mota" class="profile-link"> <!-- link para perfil Mota -->
+            <a href="intro.html?profile=mota" class="profile-link" onclick="selectProfile('mota')"> <!-- link para perfil Mota -->
                 <article class="profile">
                     <figure>
                         <img src="./assets/emanuel-luffy.jpg" alt="Perfil de Mota com tema Luffy"> <!-- imagem do perfil -->
@@ -41,5 +41,12 @@
         </section>
     </main>
     <script src="./script.js"></script> <!-- script JavaScript -->
+    <script>
+        // Função para salvar o perfil selecionado no localStorage
+        function selectProfile(profile) {
+            localStorage.setItem('selectedProfile', profile);
+        }
+    </script>
+
 </body>
 </html>

@@ -2,8 +2,8 @@
 import {
   getYouTubeId,
   getRandomMatchScore,
-  getRandomDuration,
-  getRandomAgeBadge
+  getRandomAgeBadge,
+  getAgeBadgeClass
 } from '../utils.js';
 
 // cria o cartão de filme usando dados do item
@@ -34,8 +34,14 @@ export function createCard(item) {
   card.appendChild(iframe);
   card.appendChild(img);
 
-  // badge de faixa etária gerada aleatoriamente via utils
-  const ageBadge = getRandomAgeBadge();
+  // badge de faixa etária gerada via utils: se o item passar textBadge, usa essa informação;
+  // caso contrário, mantém o aleatório antigo.
+  const ageBadge = item.textBadge
+    ? getAgeBadgeClass(item.textBadge)
+    : getRandomAgeBadge();
+
+  // se o item tiver score definido, usa ele; senão usa random
+  const matchScore = item.matchScore !== undefined ? item.matchScore : getRandomMatchScore();
 
   // painel de detalhes com botões e info
   const details = document.createElement('div');
@@ -56,15 +62,14 @@ export function createCard(item) {
       </div>
     </div>
     <div class="details-info">
-      <span class="match-score">${getRandomMatchScore()}% relevante</span>
+      <span class="match-score">${matchScore}% relevante</span>
       <span class="age-badge ${ageBadge.class}">${ageBadge.text}</span>
-      <span class="duration">${getRandomDuration(item.progress)}</span>
+      <span class="duration">${item.time || '—'}</span>
+      
       <span class="resolution">HD</span>
     </div>
     <div class="details-tags">
-      <span>Empolgante</span>
-      <span>Animação</span>
-      <span>Ficção</span>
+      ${(item.tags || ['Sem tags']).map(tag => `<span>${tag}</span>`).join('')}
     </div>
   `;
   card.appendChild(details);

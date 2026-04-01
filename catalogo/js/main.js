@@ -1,5 +1,5 @@
 // importa dados das categorias e função para criar carrosséis
-import { categories } from './data.js';
+import { catalogs } from './data.js';
 import { createCarousel } from './components/Carousel.js';
 
 // executa quando o DOM estiver carregado
@@ -54,6 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Conteúdo do catálogo
     const container = document.getElementById('main-content');
     if (container) {
+        // Pegar o perfil selecionado
+        const selectedProfile = localStorage.getItem('selectedProfile') || 'jennifer'; // padrão para Jennifer se não encontrar
+        const categories = catalogs[selectedProfile] || catalogs.jennifer; // usar catálogo do perfil ou padrão
+
         categories.forEach(category => {
             const carousel = createCarousel(category);
             container.appendChild(carousel);
