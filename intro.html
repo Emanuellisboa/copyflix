@@ -22,7 +22,7 @@
 <body>
 
   <video id="introVideo" autoplay>
-    <source src="assets/videos/Netflix New Logo Animation 2019(720P_HD).mp4" type="video/mp4">
+    <source src="./assets/videos/Netflix New Logo Animation 2019(720P_HD).mp4" type="video/mp4">
   </video>
 
   <script>
@@ -43,12 +43,12 @@
 
     // quando terminar → catálogo
     video.addEventListener("ended", () => {
-      window.location.href = "/catalogo/catalogo.html";
+      window.location.href = "./catalogo/catalogo.html";
     });
 
     // segurança (caso evento falhe)
     setTimeout(() => {
-      window.location.href = "/catalogo/catalogo.html";
+      window.location.href = "./catalogo/catalogo.html";
     }, 6000);
   </script>
 
