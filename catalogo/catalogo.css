@@ -115,15 +115,16 @@ a:hover {
 /* Sliders */
 .sliders-container {
     padding: 0 4%;
-    padding-top: 100px; /* espaço para navbar */
+    padding-top: 100px;
     position: relative;
     z-index: 3;
     padding-bottom: 100px;
+    overflow-x: hidden;
 }
 
 .slider-container {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .slider-nav {
