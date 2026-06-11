@@ -36,15 +36,15 @@ function selectProfile(profileName) {
     const profiles = { // dados dos perfis
         jennifer: {
             nome: 'Jennifer',
-            imagem: `${baseUrl}/assets/perfil-jennifer.png`
+            imagem: `./assets/perfil-jennifer.png`
         },
         gurgel: {
             nome: 'Gurgel',
-            imagem: `${baseUrl}/assets/batman-gurgel.jpg`
+            imagem: `./assets/batman-gurgel.jpg`
         },
         mota: {
             nome: 'Mota',
-            imagem: `${baseUrl}/assets/emanuel-luffy.jpg`
+            imagem: `./assets/emanuel-luffy.jpg`
         }
     };
 
