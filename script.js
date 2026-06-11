@@ -31,20 +31,20 @@ function updateThemeIcon(theme) {
 
 // Função para salvar perfil selecionado
 function selectProfile(profileName) {
-    // Caminhos absolutos para as imagens
-    const baseUrl = window.location.origin;
+    // Caminhos absolutos a partir da raiz do site, para funcionarem de qualquer página
+    // (a raiz do servidor deve ser a pasta "Netflix")
     const profiles = { // dados dos perfis
         jennifer: {
             nome: 'Jennifer',
-            imagem: `./assets/perfil-jennifer.png`
+            imagem: `/assets/perfil-jennifer.png`
         },
         gurgel: {
             nome: 'Gurgel',
-            imagem: `./assets/batman-gurgel.jpg`
+            imagem: `/assets/batman-gurgel.jpg`
         },
         mota: {
             nome: 'Mota',
-            imagem: `./assets/emanuel-luffy.jpg`
+            imagem: `/assets/emanuel-luffy.jpg`
         }
     };
 
