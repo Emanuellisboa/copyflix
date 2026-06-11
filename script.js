@@ -31,28 +31,29 @@ function updateThemeIcon(theme) {
 
 // Função para salvar perfil selecionado
 function selectProfile(profileName) {
-    // Caminhos absolutos a partir da raiz do site, para funcionarem de qualquer página
-    // (a raiz do servidor deve ser a pasta "Netflix")
-    const profiles = { // dados dos perfis
+    const pathParts = window.location.pathname.split('/');
+    pathParts.pop();
+    const basePath = window.location.origin + pathParts.join('/');
+
+    const profiles = {
         jennifer: {
             nome: 'Jennifer',
-            imagem: `/assets/perfil-jennifer.png`
+            imagem: `${basePath}/assets/perfil-jennifer.png`
         },
         gurgel: {
             nome: 'Gurgel',
-            imagem: `/assets/batman-gurgel.jpg`
+            imagem: `${basePath}/assets/batman-gurgel.jpg`
         },
         mota: {
             nome: 'Mota',
-            imagem: `/assets/emanuel-luffy.jpg`
+            imagem: `${basePath}/assets/emanuel-luffy.jpg`
         }
     };
-
     const profile = profiles[profileName];
     if (profile) {
-        localStorage.setItem('perfilAtivoNome', profile.nome); // salva nome
-        localStorage.setItem('perfilAtivoImagem', profile.imagem); // salva imagem
-        localStorage.setItem('selectedProfile', profileName); // salva chave
+        localStorage.setItem('perfilAtivoNome', profile.nome);
+        localStorage.setItem('perfilAtivoImagem', profile.imagem);
+        localStorage.setItem('selectedProfile', profileName);
     }
 }
 
