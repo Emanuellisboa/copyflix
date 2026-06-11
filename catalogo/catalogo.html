@@ -30,14 +30,14 @@
         </div>
         <div class="navbar-right"> <!-- lado direito da navbar -->
             <i class="fas fa-search icon"></i> <!-- ícone de busca -->
-            <a href="../index.html" class="kids-link">Seu nome</a> <!-- link para voltar, nome do perfil -->
+            <a href="../index.html" class="kids-link" id="profile-name">Seu nome</a> <!-- link para voltar, nome do perfil -->
             <div class="nav-notification"> <!-- notificações -->
                 <i class="fas fa-bell icon"></i> <!-- ícone de sino -->
                 <span class="notification-badge">42</span> <!-- badge de notificação -->
             </div>
             <a href="../index.html" class="profile-menu" style="text-decoration: none; color: inherit;"> <!-- menu de perfil -->
-                <img class="profile-icon" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
-                    alt="Profile"> <!-- ícone do perfil -->
+                <img class="profile-icon" id="profile-img" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+                   alt="Profile"> <!-- ícone do perfil -->
                 <i class="fas fa-caret-down icon" style="font-size: 14px; margin-left: 5px;"></i> <!-- seta para baixo -->
             </a>
         </div>
@@ -73,7 +73,28 @@
             </ul>
         </div>
     </footer>
+<script>
+    const profileKey  = localStorage.getItem('selectedProfile');
+    const profileNome = localStorage.getItem('perfilAtivoNome');
+    const profileImg  = localStorage.getItem('perfilAtivoImagem');
 
+    const fallbackImages = {
+        jennifer: '../assets/perfil-jennifer.png',
+        gurgel:   '../assets/batman-gurgel.jpg',
+        mota:     '../assets/emanuel-luffy.jpg'
+    };
+    const fallbackNomes = {
+        jennifer: 'Jennifer',
+        gurgel:   'Gurgel',
+        mota:     'Mota'
+    };
+
+    const nome   = profileNome || fallbackNomes[profileKey] || 'Perfil';
+    const imagem = profileImg  || fallbackImages[profileKey] || 'https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png';
+
+    document.getElementById('profile-name').textContent = nome;
+    document.getElementById('profile-img').src = imagem;
+</script>
     <script type="module" src="js/main.js"></script> <!-- carrega o JS modular -->
 </body>
 
