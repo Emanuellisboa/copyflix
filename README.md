@@ -27,3 +27,36 @@ Clone da interface da Netflix com seleção de perfis, catálogo personalizado e
 ---
 
 ## 📂 Estrutura
+
+copyflix/
+├── index.html        # Seleção de perfis
+├── intro.html        # Animação de entrada
+├── style.css
+├── script.js
+├── assets/           # Imagens dos perfis
+└── catalogo/
+├── catalogo.html
+├── catalogo.css
+└── js/
+├── main.js
+├── data.js
+├── utils.js
+└── components/
+├── Card.js
+└── Carousel.js
+
+---
+
+## 🚀 Como usar
+
+1. Acesse o [link do projeto](https://emanuellisboa.github.io/copyflix/)
+2. Selecione um perfil
+3. Explore o catálogo
+4. Use o botão 🌙/☀️ para alternar o tema
+
+---
+
+## 👨‍💻 Autor
+
+Feito por [Emanuel Mota](https://github.com/Emanuellisboa) · [LinkedIn](https://linkedin.com/in/emanuel-lisboa01)
+apoio @[alura](https://www.alura.com.br/?srsltid=AfmBOooUcNCbV5rmjLnzQBfHRcldaEGSM5StmZalZ_025i2AqDxfMdFw)
